@@ -16,7 +16,7 @@ export const TransactionHistory = ({items}) => {
       {items.map(item => {
         i = i + 1
         return  <tr key={item.id} className={clsx(i%2 == 0 ? css.lineOP : css.casual)}>
-        <td className={css.tdwidth}>{item.type}</td>
+        <td className={css.tdwidth}>{item.type[0].toUpperCase() + item.type.slice(1)}</td>
         <td className={css.tdwidth}>{item.amount}</td>
         <td className={css.tdwidth}>{item.currency}</td>
       </tr>
